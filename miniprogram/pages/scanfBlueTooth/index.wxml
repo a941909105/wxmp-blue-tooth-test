@@ -1,0 +1,13 @@
+<!--{{page}}.wxml-->
+<view>
+    <view>
+    <input bindinput="bindSearchInput" value="{{searchText}}" /> 
+    <button bindtap="bindAddSearchTag">添加搜索标签</button>
+    </view>
+    <view>
+        <view wx:for="{{searchTags}}" wx:for-item="item" wx:for-index="index">
+            <text>{{item}}</text>
+            <icon type="cancel" bindtap="bindRemoveSearchTag" data-tag="{{item}}"></icon>
+        </view>
+    </view>
+</view>
